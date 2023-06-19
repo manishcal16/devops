@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using shopping.clienct.Data;
 using shopping.clienct.Models;
 using System.Diagnostics;
 
@@ -15,7 +16,7 @@ namespace shopping.clienct.Controllers
 
         public IActionResult Index()
         {
-            return View();
+            return View(ProductContext.Products);
         }
 
         public IActionResult Privacy()
